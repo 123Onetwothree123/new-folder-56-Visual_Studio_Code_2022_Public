@@ -5,5 +5,6 @@
 int main(void)
 {
     printf("HelloWorld.");
+    std::cin.get();
     return 0;
 }
