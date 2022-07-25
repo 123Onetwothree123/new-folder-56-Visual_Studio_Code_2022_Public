@@ -2,13 +2,14 @@
 #include <fstream>
 #include <cstdio>
 #include <cstdlib>
+#include <cmath>
 int main(void)
 {
     printf("HelloWorld.\n");
     printf("---------------------------------\n");
     printf("This is a code test:\n");
     printf("Test1\n");
-    
+
     printf("---------------------------------\n");
     std::cin.get();
     return 0;
