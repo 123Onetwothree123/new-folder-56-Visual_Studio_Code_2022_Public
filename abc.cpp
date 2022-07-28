@@ -1,8 +1,5 @@
 #include <iostream>
-#include <fstream>
 #include <cstdio>
-#include <cstdlib>
-#include <cmath>
 const int ArSize = 8;
 int sum_arr(int arr[], int n); // arr=array name,n=size
 int main(void)
