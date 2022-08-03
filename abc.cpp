@@ -18,14 +18,14 @@ int sum_arr(int arr[], int n)
     }
     return total;
 }
-int fill_array(double ar[],int limit){
-    double temp;
-    int i;
-    for (i = 0; i < limit; i++)
+int fill_array(double ar[],int limit){//函数
+    double temp;//声明一个double变量
+    int i;//声明一个int变量
+    for (i = 0; i < limit; i++)//for循环
     {
-        std::cout<<"Enter value #"<<(i+1)<<": ";
-        std::cin>>temp;
-        if (!std::cin)
+        std::cout<<"Enter value #"<<(i+1)<<": ";//打印输出
+        std::cin>>temp;//输入temp变量，接收输入内容
+        if (!std::cin)//bad input如果cin发生了错误，将会执行if语句内容
         {
             std::cin.clear();
             while (std::cin.get()!= '\n')
