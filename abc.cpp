@@ -27,18 +27,18 @@ int fill_array(double ar[],int limit){//函数
         std::cin>>temp;//输入temp变量，接收输入内容
         if (!std::cin)//bad input如果cin发生了错误，将会执行if语句内容
         {
-            std::cin.clear();
-            while (std::cin.get()!= '\n')
+            std::cin.clear();//std::cin.clear让错误标识改回为0
+            while (std::cin.get()!= '\n')//输入内容只要不是换行符，将执行while循环
             {
-                continue;
+                continue;//结束本次循环，进行下一次循环，而不终止整个循环的执行。
             }
-            std::cout<<"Bad input; input process terminated.\n";
+            std::cout<<"Bad input; input process terminated.\n";//打印输出
             break;
-        }else if (temp<0)
+        }else if (temp<0)//如果temp<0将执行这一个
         {
-            break;
+            break;//跳出分支
         }
-        ar[i]=temp;
+        ar[i]=temp;//赋值，将temp的值赋给ar[i]
     }
-    return i;
+    return i;//函数最后放回i
 }
