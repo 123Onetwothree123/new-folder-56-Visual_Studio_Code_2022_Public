@@ -41,5 +41,5 @@ int fill_array(double ar[],int limit){//函数
         }
         ar[i]=temp;//赋值，将temp的值赋给ar[i]
     }
-    return i;//函数最后放回i
+    return i;//函数最后返回i
 }
