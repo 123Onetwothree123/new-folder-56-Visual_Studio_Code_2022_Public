@@ -2,7 +2,7 @@
 #include <cstdio>
 const int ArSize = 8;
 int sum_arr(int arr[], int n); // arr=array name,n=size
-int fill_array(double ar[],int limit);
+int fill_array(double ar[],int limit);//函数
 int main(void)
 {
     int cookies[ArSize] = {1, 2, 4, 8, 16, 32, 64, 128};
