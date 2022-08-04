@@ -22,7 +22,7 @@ int sum_arr(int arr[], int n)
 int fill_array(double ar[],int limit){//函数
     double temp;//声明一个double变量
     int i;//声明一个int变量
-    for (i = 0; i < limit; i++)//for循环
+    for (i = 0; i < limit; i++)//for循环，i赋值为0，如果i<limit开始执行循环，条件不满足将会停止
     {
         std::cout<<"Enter value #"<<(i+1)<<": ";//打印输出
         std::cin>>temp;//输入temp变量，接收输入内容
