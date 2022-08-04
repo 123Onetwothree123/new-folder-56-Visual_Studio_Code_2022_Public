@@ -2,8 +2,9 @@
 #include <cstdio>
 const int ArSize = 8;
 int sum_arr(int arr[], int n);             // arr=array name,n=size
-int fill_array(double ar[], int limit);    //函数
-void show_array(const double ar[], int n); //函数
+int fill_array(double ar[], int limit);    //填充数组
+void show_array(const double ar[], int n); //显示数据及用const保护数组
+void revalue(double r, double ar[], int n);
 int main(void)
 {
     int cookies[ArSize] = {1, 2, 4, 8, 16, 32, 64, 128};
@@ -52,5 +53,12 @@ void show_array(const double ar[], int n)
     {
         std::cout << "Property #" << (i + 1) << ": $";
         std::cout << ar[i] << std::endl;
+    }
+}
+void revalue(double r, double ar[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        ar[i] *= r;
     }
 }
