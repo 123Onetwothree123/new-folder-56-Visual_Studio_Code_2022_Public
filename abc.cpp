@@ -44,7 +44,7 @@ int sum_arr(int arr[], int n)
     }
     return total;
 }
-int fill_array(double ar[], int limit)
+int fill_array(double ar[], int limit)//填充数组
 {                               //函数
     double temp;                //声明一个double变量
     int i;                      //声明一个int变量
@@ -70,7 +70,7 @@ int fill_array(double ar[], int limit)
     }
     return i; //函数最后返回i
 }
-void show_array(const double ar[], int n)
+void show_array(const double ar[], int n)//显示数据及用const保护数组don't change data不要更改数据
 {
     for (int i = 0; i < n; i++)
     {
@@ -78,7 +78,7 @@ void show_array(const double ar[], int n)
         std::cout << ar[i] << std::endl;
     }
 }
-void revalue(double r, double ar[], int n)
+void revalue(double r, double ar[], int n)//修改数组
 {
     for (int i = 0; i < n; i++)
     {
