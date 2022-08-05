@@ -1,15 +1,38 @@
 #include <iostream>
 #include <cstdio>
 const int ArSize = 8;
-int sum_arr(int arr[], int n);             // arr=array name,n=size
-int fill_array(double ar[], int limit);    //填充数组
-void show_array(const double ar[], int n); //显示数据及用const保护数组
-void revalue(double r, double ar[], int n);//修改数组
+const int Max = 5;
+int sum_arr(int arr[], int n);              // arr=array name,n=size
+int fill_array(double ar[], int limit);     //填充数组
+void show_array(const double ar[], int n);  //显示数据及用const保护数组don't change data不要更改数据
+void revalue(double r, double ar[], int n); //修改数组
 int main(void)
 {
     int cookies[ArSize] = {1, 2, 4, 8, 16, 32, 64, 128};
     int sum = sum_arr(cookies, ArSize);
     std::cout << "Total cookies eaten: " << sum << "\n";
+    printf("-------------------------------------------\n");
+    //将填充数组，显示数据及用const保护数组，修改数组的函数的上述代码组合起来
+    double properties[Max];
+    int size = fill_array(properties, Max);
+    show_array(properties, size);
+    if (size > 0)
+    {
+        printf("Enter revaluation factor: ");
+        double factor;
+        while (!(std::cin >> factor))
+        {
+            std::cin.clear();
+            while (std::cin.get() != '\n')
+            {
+                continue;
+            }
+            printf("Bad input; Please enter a number: ");
+        }
+        revalue(factor, properties, size);
+        show_array(properties, size);
+    }
+    printf("Done.\n");
     return 0;
 }
 int sum_arr(int arr[], int n)
@@ -61,4 +84,4 @@ void revalue(double r, double ar[], int n)
     {
         ar[i] *= r;
     }
-}//由于这个函数将修改数组的值，因此在声明ar时，不能使用const。
+} //由于这个函数将修改数组的值，因此在声明ar时，不能使用const。
