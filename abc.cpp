@@ -13,7 +13,7 @@ int main(void)
     std::cout << "Total cookies eaten: " << sum << "\n";
     printf("-------------------------------------------\n");
     //将填充数组，显示数据及用const保护数组，修改数组的函数的上述代码组合起来
-    double properties[Max];
+    double properties[Max];//创建一个double类型的数组
     int size = fill_array(properties, Max);
     show_array(properties, size);
     if (size > 0)
