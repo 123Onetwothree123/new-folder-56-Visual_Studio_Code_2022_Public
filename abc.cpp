@@ -60,11 +60,11 @@ int fill_array(double ar[], int limit)//填充数组
                 continue; //结束本次循环，进行下一次循环，而不终止整个循环的执行。
             }
             std::cout << "Bad input; input process terminated.\n"; //打印输出
-            break;
+            break;//跳出
         }
-        else if (temp < 0) //如果temp<0将执行这一个
+        else if (temp < 0) //如果temp<0将执行这一个分支
         {
-            break; //跳出分支
+            break; //跳出
         }
         ar[i] = temp; //赋值，将temp的值赋给ar[i]
     }
